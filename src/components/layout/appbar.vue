@@ -59,9 +59,9 @@
                 style="cursor: pointer"
                 @click="$router.push('/')"
             >
-              <v-icon color="primary" large>mdi-feather</v-icon>
-              Hero
-              <span class="accent--text">UI</span>
+              <v-icon color="primary" large>mdi-laptop</v-icon>
+              ricardow.com
+              <span class="accent--text">DEV</span>
             </v-toolbar-title>
           </v-col>
 
@@ -129,10 +129,6 @@ export default {
       {
         title: "Authors",
         to: "/authors",
-      },
-      {
-        title: "Login",
-        to: "/login",
       },
     ],
   }),
