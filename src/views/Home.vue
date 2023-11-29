@@ -31,11 +31,11 @@
         </v-img>
       </v-card>
     </div>
-
     <v-row>
       <v-col cols="12" lg="12" xl="8">
         <div>
-          <div class="pt-16">
+          <div class="pt-2">
+          <!--
             <h2 class="text-h4 font-weight-bold pb-4">Recommended For You</h2>
 
             <v-row>
@@ -89,8 +89,10 @@
                 </v-hover>
               </v-col>
             </v-row>
-          </div>
+            -->
 
+          </div>
+          <!--
           <div class="pt-16">
             <h2 class="text-h4 font-weight-bold pb-4">Featured</h2>
 
@@ -133,7 +135,7 @@
               </v-col>
             </v-row>
           </div>
-
+          -->
           <div class="pt-16">
             <h2 class="text-h4 font-weight-bold">Latest Posts</h2>
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--
     <div>
       <h3 class="text-h5 font-weight-medium pb-4">Popular Posts</h3>
 
@@ -38,6 +39,8 @@
       </div>
     </div>
 
+    -->
+    <!--
     <div class="pt-4">
       <h3 class="text-h5 font-weight-medium pb-4">Category</h3>
 
@@ -53,7 +56,8 @@
         </v-card-text>
       </v-card>
     </div>
-
+    -->
+    <!--
     <div class="pt-4">
       <h3 class="text-h5 font-weight-medium pb-4">Top Authors</h3>
 
@@ -72,7 +76,6 @@
         </div>
       </div>
     </div>
-
     <div class="pt-4">
       <h3 class="text-h5 font-weight-medium pb-4">Tags</h3>
 
@@ -84,7 +87,6 @@
         </v-col>
       </v-row>
     </div>
-
     <div class="pt-4">
       <h3 class="text-h5 font-weight-medium pb-4">Newsletter</h3>
 
@@ -100,5 +102,10 @@
       ></v-text-field>
       <v-btn color="accent" block large>Subscrbe</v-btn>
     </div>
+    -->
+
+
   </div>
 </template>
+<script>
+</script>
