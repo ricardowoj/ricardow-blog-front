@@ -65,7 +65,7 @@
             </v-toolbar-title>
           </v-col>
 
-          <v-col v-if="$vuetify.breakpoint.mdAndUp" cols="6">
+          <v-col v-if="$vuetify.breakpoint.mdAndUp" class="text-right">
             <v-btn
                 v-for="(item, i) in barItems"
                 :key="i"
@@ -75,23 +75,6 @@
                 exact-active-class="accent--text"
                 text
             >{{ item.title }}
-            </v-btn
-            >
-          </v-col>
-
-          <v-col v-if="$vuetify.breakpoint.mdAndUp" class="text-right">
-            <v-btn
-                v-for="(item, i) in btnItems"
-                :key="i"
-                :color="item.color"
-                :href="item.href"
-                :outlined="item.outlined"
-                :target="item.target"
-                :to="item.to"
-                class="ml-3 text-capitalize"
-            >
-              <v-icon left>{{ item.icon }}</v-icon>
-              {{ item.text }}
             </v-btn>
           </v-col>
         </v-row>
@@ -121,15 +104,7 @@ export default {
       {
         title: "Category",
         to: "/category",
-      },
-      {
-        title: "Detail",
-        to: "/detail",
-      },
-      {
-        title: "Authors",
-        to: "/authors",
-      },
+      }
     ],
   }),
 };
