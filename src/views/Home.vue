@@ -2,44 +2,17 @@
   <div>
     <div>
       <v-card to="detail">
-        <v-img
-            :aspect-ratio="16 / 9"
-            dark
-            gradient="to top, rgba(25,32,72,.7), rgba(25,32,72,.0)"
-            height="500px"
-            src="https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg"
-        >
-          <v-card-text class="fill-height d-flex align-end">
-            <v-row class="flex-column">
-              <v-col>
-                <v-btn color="accent" to="category">Travel</v-btn>
-              </v-col>
-              <v-col cols="12" lg="8" md="10" xl="7">
-                <h2 class="text-h3 py-3" style="line-height: 1.2">
-                  Great Travel Blogs From Around The World To Inspire You
-                </h2>
-              </v-col>
-              <v-col class="d-flex align-center">
-                <v-avatar class="elevation-4" color="accent">
-                  <v-icon large>mdi-feather</v-icon>
-                </v-avatar>
 
-                <div class="text-h6 pl-2">Yan Lee · 22 July 2019</div>
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-img>
       </v-card>
     </div>
     <v-row>
       <v-col cols="12" lg="12" xl="8">
         <div>
-          <div class="pt-2">
-          <!--
-            <h2 class="text-h4 font-weight-bold pb-4">Recommended For You</h2>
+          <div class="pt-2 mt-10">
+            <h2 class="text-h4 font-weight-bold pb-4">Last of posts</h2>
 
             <v-row>
-              <v-col v-for="i in 6" :key="i" cols="12" lg="4" md="6">
+              <v-col v-for="i in 30" :key="i" cols="12" lg="4" md="6">
                 <v-hover
                     v-slot:default="{ hover }"
                     close-delay="50"
@@ -89,7 +62,6 @@
                 </v-hover>
               </v-col>
             </v-row>
-            -->
 
           </div>
           <!--
@@ -135,12 +107,12 @@
               </v-col>
             </v-row>
           </div>
-          -->
+
           <div class="pt-16">
             <h2 class="text-h4 font-weight-bold">Latest Posts</h2>
 
             <div>
-              <v-row v-for="i in 6" :key="i" class="py-4">
+              <v-row v-for="i in 2" :key="i" class="py-4">
                 <v-col cols="12" md="4">
                   <v-card flat height="100%">
                     <v-img
@@ -178,6 +150,7 @@
               </v-row>
             </div>
           </div>
+          -->
         </div>
       </v-col>
 
