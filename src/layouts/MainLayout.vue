@@ -38,7 +38,7 @@
         </q-item-label>
         <div class="q-pa-md q-gutter-md">
           <q-chip size="md" icon="bookmark">
-            Links Blog
+            Menus Blog
           </q-chip>
         </div>
 
@@ -77,7 +77,7 @@ const linksList = [
     title: 'E-mail',
     caption: 'Send a message',
     icon: 'email',
-    route: { name: 'email' }
+    route: { name: 'formEmail' }
   }
 ]
 
