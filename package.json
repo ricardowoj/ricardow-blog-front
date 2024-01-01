@@ -2,7 +2,7 @@
   "name": "ricardow-blog-front",
   "version": "0.0.1",
   "description": "A Blog Project",
-  "productName": "Blog App",
+  "productName": "RicardoW Blog",
   "author": "Ricardo <ricardowoj@hotmail.com>",
   "private": true,
   "scripts": {
