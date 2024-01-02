@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Ricardo Wojciechowski Blog
+          Ricardo Wojciechowski
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -44,7 +44,7 @@
 
         <EssentialLink
           v-for="link in essentialLinks"
-          :key="link.title"
+          :key="link"
           v-bind="link"
         />
       </q-list>
@@ -65,7 +65,7 @@ const linksList = [
     title: 'Posts',
     caption: 'My Posts',
     icon: 'mdi-blogger',
-    link: 'https://quasar.dev'
+    link: 'home'
   },
   {
     title: 'Github',
@@ -74,10 +74,10 @@ const linksList = [
     link: 'https://github.com/ricardowoj?tab=repositories'
   },
   {
-    title: 'E-mail',
+    title: 'Email',
     caption: 'Send a message',
     icon: 'email',
-    route: { name: 'formEmail' }
+    link: 'formEmail'
   }
 ]
 

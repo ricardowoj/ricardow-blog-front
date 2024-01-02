@@ -1,9 +1,8 @@
 <template>
   <q-item
+    exact
     clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+    @click="redirectLink(link)"
   >
     <q-item-section
       v-if="icon"
@@ -21,6 +20,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'EssentialLink',
@@ -35,14 +35,28 @@ export default defineComponent({
       default: ''
     },
 
-    link: {
-      type: String,
-      default: '#'
-    },
-
     icon: {
       type: String,
       default: ''
+    },
+
+    link: {
+      type: String,
+      default: ''
+    }
+  },
+  setup () {
+    const router = useRouter()
+    const redirectLink = (link) => {
+      const containsRoute = router.getRoutes().filter((key) => key.name === link)
+      if (containsRoute.length > 0) {
+        router.push({ name: link })
+      } else {
+        window.open(link, '_blank', 'noreferrer')
+      }
+    }
+    return {
+      redirectLink
     }
   }
 })

@@ -18,7 +18,7 @@
     </q-form>
     <div class="col-12 q-gutter-md q-mt-md">
       <q-btn
-        label="Enviar"
+        label="Send now"
         color="primary"
         class="float-right"
         icon="send"
