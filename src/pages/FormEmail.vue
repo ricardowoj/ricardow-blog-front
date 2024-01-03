@@ -3,18 +3,18 @@
     <q-form
       @submit="onSubmit">
       <q-input
-        filled
         lazy-rules
         label="Title"
         v-model="form.title"
         class="col-md-12"
         :rules="[val => val && val.length > 0 || 'Required field']" />
-      <q-editor
-        v-model="form.body"
-        class="col-md-12"
-        :definitions="{
-          bold: { label: 'Bold', icon: null, tip: 'My bold tooltip' }
-        }" />
+      <q-field ref="fieldRef" v-model="form.body" label-slot borderless
+        :rules="[val => (!!val && val !== '<br>') || 'Field is required']" >
+        <template #control>
+          <q-editor v-model="form.body" min-height="25rem" class="full-width"
+            :style="fieldRef && fieldRef.hasError ? 'border-color: var(--q-negative)' : ''"/>
+        </template>
+      </q-field>
     </q-form>
     <div class="col-12 q-gutter-md q-mt-md">
       <q-btn
@@ -40,6 +40,7 @@ export default defineComponent({
     const $q = useQuasar()
     const router = useRouter()
     const { notifySucess, notifyError } = useNotify()
+    const fieldRef = ref(null)
     const form = ref({
       title: '',
       body: ''
@@ -53,7 +54,7 @@ export default defineComponent({
       }).onOk(async () => {
         try {
           notifySucess('Email successfully sent')
-          router.push({ name: 'home' })
+          await router.push({ name: 'home' })
         } catch (error) {
           notifyError(error?.message)
         }
@@ -61,7 +62,8 @@ export default defineComponent({
     }
     return {
       form,
-      onSubmit
+      onSubmit,
+      fieldRef
     }
   }
 })
