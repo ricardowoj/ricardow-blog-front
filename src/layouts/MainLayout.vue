@@ -32,12 +32,13 @@
           </div>
         </q-item-label>
         <div class="q-pa-md q-gutter-md">
-          <q-chip outline icon="bookmark" color="secondary" text-color="secondary" style="font-size: 16px;">
+          <q-chip outline icon="bookmark" color="secondary" text-color="secondary" class="q-ml-lg"
+                  style="font-size: 16px;">
             Menus Blog
           </q-chip>
         </div>
 
-        <EssentialLink v-for="link in essentialLinks" :key="link" v-bind="link" />
+        <EssentialLink v-for="link in essentialLinks" :key="link" v-bind="link" class="q-ml-md"/>
       </q-list>
     </q-drawer>
 
